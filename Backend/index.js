@@ -9,6 +9,19 @@ const roomsRoute = require('./routes/rooms')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 
+const corsConfig = {
+    origin :"*",
+    credentials:true,
+    methods:["GET","POST","DELETE","PUT"]
+}
+
+app.options("",cors(corsConfig))
+app.use(cors(corsConfig));
+
+app.use(express.json())
+
+app.use(cookieParser())
+
 dotenv.config()
 
 
@@ -28,14 +41,7 @@ mongoose.connection.on("connected",()=>{
     console.log('MONGODB Connected');
 })
 
-app.use(cors({
-    origin: '*',
-    credentials: true // Allow credentials (cookies, authorization headers, etc.)
-  }));
 
-app.use(express.json())
-
-app.use(cookieParser())
 
 app.use('/api/auth',authRoute)
 app.use('/api/users',usersRoute)
