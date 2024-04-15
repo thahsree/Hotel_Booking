@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from '../../hooks/useFetch';
 import './propertyList.css';
 function PropertyList(props) {
-    const { data, loading, err, reFetch } = useFetch("http://localhost:8080/api/hotels/countbytype")
+    const { data, loading, err, reFetch } = useFetch("https://hotel-booking-5hga.onrender.com/api/hotels/countbytype")
 
     const images = [
         "https://q-xx.bstatic.com/xdata/images/xphoto/263x210/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=",

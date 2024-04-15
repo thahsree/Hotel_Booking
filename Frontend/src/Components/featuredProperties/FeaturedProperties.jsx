@@ -4,7 +4,7 @@ import './featuredProperties.css';
 
 
 function FeaturedProperties(props) {
-    const { data, loading, err, reFetch } = useFetch("http://localhost:8080/api/hotels/?featured=true&queryLimit=4")
+    const { data, loading, err, reFetch } = useFetch("https://hotel-booking-5hga.onrender.com/api/hotels/?featured=true&queryLimit=4")
     return (
         <div className='fp'>
             {

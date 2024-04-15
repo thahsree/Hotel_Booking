@@ -22,7 +22,7 @@ function Login(props) {
         dispatch({ type: "LOGIN_START" })
         try {
 
-            const response = await axios.post('https://hotel-booking-api-teal.vercel.app/api/auth/login', credentials )
+            const response = await axios.post('https://hotel-booking-5hga.onrender.com/api/auth/login', credentials )
 
             dispatch({ type: "LOGIN_SUCCESS", payload: response.data.details })
             const prevLocation = localStorage.getItem("prevLocation")

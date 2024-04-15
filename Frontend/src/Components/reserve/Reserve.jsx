@@ -9,11 +9,9 @@ import "./reserve.css";
 function Reserve({ setOpen, hotelId }) {
 
     const [selectedRooms, setSelectedRooms] = useState([])
-    const { data, loading, err, reFetch } = useFetch(`http://localhost:8080/api/hotels/rooms/${hotelId}`)
+    const { data, loading, err, reFetch } = useFetch(`https://hotel-booking-5hga.onrender.com/api/hotels/rooms/${hotelId}`)
 
     const { dates } = useContext(searchContext)
-
-    console.log('>>>hotelid',hotelId);
 
     const getDatesInRange = (startDate, endDate) => {
         const start = new Date(startDate)
@@ -57,7 +55,7 @@ function Reserve({ setOpen, hotelId }) {
         try {
             await Promise.all(
                 selectedRooms.map((roomId)=>{
-                    const res =axios.put(`http://localhost:8080/api/rooms/available/${roomId}`,{
+                    const res =axios.put(`https://hotel-booking-5hga.onrender.com/api/rooms/available/${roomId}`,{
                         dates:allDates
                     })
                     return res.data

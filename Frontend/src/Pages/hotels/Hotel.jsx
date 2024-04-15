@@ -19,7 +19,7 @@ function Hotel(props) {
     const navigate = useNavigate()
     const location = useLocation()
     const path = location.pathname.split('/')[2]
-    const { data, loading, err, reFetch } = useFetch(`https://hotel-booking-api-teal.vercel.app/api/hotels/find/${path}`)
+    const { data, loading, err, reFetch } = useFetch(`https://hotel-booking-5hga.onrender.com/api/hotels/find/${path}`)
 
     const {dates , options} = useContext(searchContext)
     

@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import './featured.css';
 function Featured(props) {
 
-    const {data , loading , err , reFetch} = useFetch("https://hotel-booking-c7ofqrtc9-thashreefs-projects-29de65dc.vercel.app/api/hotels/countbycity?cities=Kannur,Taliparamba,Payyannur")
+    const {data , loading , err , reFetch} = useFetch("https://hotel-booking-5hga.onrender.com/api/hotels/countbycity?cities=Kannur,Taliparamba,Payyannur")
 
     
     return (

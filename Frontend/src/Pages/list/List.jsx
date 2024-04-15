@@ -19,7 +19,7 @@ function List(props) {
     const [min , setMin] = useState(undefined);
     const [max , setMax] = useState(undefined)
 
-    const { data, loading, err, reFetch } = useFetch(`http://localhost:8080/api/hotels?city=${destination}&min=${min || 0 }&max=${max || 15000}`)
+    const { data, loading, err, reFetch } = useFetch(`https://hotel-booking-5hga.onrender.com/api/hotels?city=${destination}&min=${min || 0 }&max=${max || 15000}`)
 
     const handleSubmit = ()=>{
         reFetch()
