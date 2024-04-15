@@ -29,7 +29,7 @@ mongoose.connection.on("connected",()=>{
 })
 
 app.use(cors({
-    origin: ['http://localhost:5173','http://localhost:5174'],
+    origin: ['https://hotel-booking-client-zeta.vercel.app/'],
     credentials: true // Allow credentials (cookies, authorization headers, etc.)
   }));
 

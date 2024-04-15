@@ -3,8 +3,9 @@ import useFetch from '../../hooks/useFetch';
 import './featured.css';
 function Featured(props) {
 
-    const {data , loading , err , reFetch} = useFetch("http://localhost:8080/api/hotels/countbycity?cities=Kannur,Taliparamba,Payyannur")
+    const {data , loading , err , reFetch} = useFetch("https://hotel-booking-api-teal.vercel.app/api/hotels/countbycity?cities=Kannur,Taliparamba,Payyannur")
 
+    
     return (
         <div className='featured'>
             {
