@@ -55,6 +55,10 @@ app.use((err,req,res,next)=>{
     })
 })
 
+app.get('/',(req,res)=>{
+    res.send('connected')
+})
+
 app.listen(8080,()=>{
     connectDB()
     console.log('connected to server PORT:8080');
