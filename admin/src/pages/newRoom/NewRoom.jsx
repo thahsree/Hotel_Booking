@@ -10,7 +10,7 @@ function NewRoom({ input, title }) {
     const [hotelID, setHotelID] = useState(undefined)
     const [rooms , setRooms] = useState([])
 
-    const { data, loading, error, reFetch } = useFetch(`http://localhost:8080/api/hotels`);
+    const { data, loading, error, reFetch } = useFetch(`https://hotel-booking-5hga.onrender.com/api/hotels`);
 
     const handleChange = e => {
         setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -22,7 +22,7 @@ function NewRoom({ input, title }) {
         console.log(info);
         try {
 
-            await axios.post(`http://localhost:8080/api/rooms/${hotelID}`,{...info,roomNumbers},{
+            await axios.post(`https://hotel-booking-5hga.onrender.com/api/rooms/${hotelID}`,{...info,roomNumbers},{
                 withCredentials: true // Add this option to include cookies
             } )
 

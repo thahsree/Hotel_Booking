@@ -8,7 +8,7 @@ import './datatable.css';
 function DataTable({columns}) {
     const location = useLocation();
     const path = location.pathname.split('/')[1];
-    const { data, loading, error, reFetch } = useFetch(`http://localhost:8080/api/${path}`);
+    const { data, loading, error, reFetch } = useFetch(`https://hotel-booking-5hga.onrender.com/api/${path}`);
     const [list, setList] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function DataTable({columns}) {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8080/api/${path}/${id}`, {
+            await axios.delete(`https://hotel-booking-5hga.onrender.com/api/${path}/${id}`, {
                 withCredentials: true
             });
             setList(prevList => prevList.filter(item => item._id !== id));

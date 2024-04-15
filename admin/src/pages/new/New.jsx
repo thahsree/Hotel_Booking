@@ -28,7 +28,7 @@ function New({ input, title }) {
                 ...info,
                 img:url
             }
-            await axios.post('http://localhost:8080/api/auth/register',newUser);
+            await axios.post('https://hotel-booking-5hga.onrender.com/api/auth/register',newUser);
         } catch (error) {
             console.log(error);
         }

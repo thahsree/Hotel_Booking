@@ -23,7 +23,7 @@ function Login(props) {
         dispatch({ type: "LOGIN_START" })
         try {
 
-            const response = await axios.post('http://localhost:8080/api/auth/login', credentials)
+            const response = await axios.post('https://hotel-booking-5hga.onrender.com/api/auth/login', credentials)
 
             if(response.data.isAdmin){
                 dispatch({ type: "LOGIN_SUCCESS", payload: response.data })

@@ -48,7 +48,7 @@ function NewRoom({ input, title }) {
             }
 
             console.log(newHotel);
-            await axios.post("http://localhost:8080/api/hotels",newHotel,{
+            await axios.post("https://hotel-booking-5hga.onrender.com/api/hotels",newHotel,{
                 withCredentials: true // Add this option to include cookies
             })
             
