@@ -29,7 +29,7 @@ mongoose.connection.on("connected",()=>{
 })
 
 app.use(cors({
-    origin: ['https://hotel-booking-client-zeta.vercel.app','https://hotel-booking-api-git-main-thashreefs-projects-29de65dc.vercel.app','https://hotel-booking-c91yir2s9-thashreefs-projects-29de65dc.vercel.app'],
+    origin: '*',
     credentials: true // Allow credentials (cookies, authorization headers, etc.)
   }));
 
